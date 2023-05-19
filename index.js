@@ -28,6 +28,17 @@ async function run() {
     try {
         // Connect the client to the server	(optional starting in v4.7)
         await client.connect();
+
+        // toys collection
+        const toyscollection = client.db('toyMarketplace').collection('toys');
+
+        // getting toys from mongodb
+        app.get('/toys', async (req, res) => {
+            const result = await toyscollection.find().toArray();
+            res.send(result);
+        })
+
+
         // Send a ping to confirm a successful connection
         await client.db("admin").command({
             ping: 1

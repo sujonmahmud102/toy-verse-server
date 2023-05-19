@@ -1,0 +1,67 @@
+[{
+        "photo": "https://example.com/toy-car1.jpg",
+        "title": "Red Sports Car",
+        "sellerName": "Toyland Emporium",
+        "sellerEmail": "toyland@example.com",
+        "subCategory": "Sports Cars",
+        "price": 29.99,
+        "rating": 4.5,
+        "quantity": 10,
+        "description": "This red sports car is perfect for little racing enthusiasts. It features a sleek design and smooth wheels for fast-paced action."
+    },
+    {
+        "photo": "https://example.com/toy-car2.jpg",
+        "title": "Yellow School Bus",
+        "sellerName": "KidsToys Co.",
+        "sellerEmail": "kidstoys@example.com",
+        "subCategory": "Vehicles",
+        "price": 14.99,
+        "rating": 4.2,
+        "quantity": 5,
+        "description": "Let your child's imagination roam with this realistic yellow school bus. It comes with opening doors and seats for tiny passengers."
+    },
+    {
+        "photo": "https://example.com/toy-car3.jpg",
+        "title": "Blue Monster Truck",
+        "sellerName": "ToysRUs",
+        "sellerEmail": "toysrus@example.com",
+        "subCategory": "Monster Trucks",
+        "price": 39.99,
+        "rating": 4.8,
+        "quantity": 3,
+        "description": "Get ready for some thrilling monster truck action with this blue beast. It has oversized wheels and a powerful suspension for off-road adventures."
+    },
+    {
+        "photo": "https://example.com/toy-car4.jpg",
+        "title": "Pink Convertible",
+        "sellerName": "Kids' Playtime",
+        "sellerEmail": "playtime@example.com",
+        "subCategory": "Convertible Cars",
+        "price": 24.99,
+        "rating": 4.6,
+        "quantity": 8,
+        "description": "Cruise in style with this adorable pink convertible. The roof can be lowered, and it comes with a mini doll to accompany the driver."
+    },
+    {
+        "photo": "https://example.com/toy-car5.jpg",
+        "title": "Fire Truck",
+        "sellerName": "Fun Toys Inc.",
+        "sellerEmail": "funtoys@example.com",
+        "subCategory": "Emergency Vehicles",
+        "price": 19.99,
+        "rating": 4.4,
+        "quantity": 12,
+        "description": "Sound the alarm! This fire truck toy is equipped with flashing lights and realistic sirens. It's perfect for aspiring young firefighters."
+    },
+    {
+        "photo": "https://example.com/toy-car6.jpg",
+        "title": "Green Off-Roader",
+        "sellerName": "Adventure Toys",
+        "sellerEmail": "adventuretoys@example.com",
+        "subCategory": "Off-Road Vehicles",
+        "price": 34.99,
+        "rating": 4.7,
+        "quantity": 6,
+        "description": "Take the road less traveled with this sturdy green off-roader. Its rugged design and working suspension make it suitable for any terrain."
+    }
+]
