@@ -41,7 +41,9 @@ async function run() {
         // toy info collect from client side
         app.post('/addAToy', async (req, res) => {
             const newToy = req.body;
-            console.log(newToy)
+            const result = await toyscollection.insertOne(newToy);
+            res.send(result);
+            
         })
 
 
