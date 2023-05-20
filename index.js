@@ -47,6 +47,16 @@ async function run() {
             res.send(result)
         })
 
+        // getting single toy from mongodb
+        app.get('/toy/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = {
+                _id: new ObjectId(id)
+            };
+            const result = await toyscollection.findOne(query);
+            res.send(result);
+        })
+
         // toy info collect from client side
         app.post('/addAToy', async (req, res) => {
             const newToy = req.body;
@@ -62,6 +72,30 @@ async function run() {
                 _id: new ObjectId(id)
             };
             const result = await toyscollection.deleteOne(query);
+            res.send(result);
+        })
+
+        // update toy
+        app.put('/updateToy/:id', async (req, res) => {
+            const id = req.params.id;
+            const filter = {
+                _id: new ObjectId(id)
+            };
+            const updatedToy = req.body;
+            const options = {
+                upsert: true
+            };
+            const toy = {
+                $set: {
+                    photo: updatedToy.photo,
+                    toyName: updatedToy.toyName,
+                    subCategory: updatedToy.subCategory,
+                    rating: updatedToy.rating,
+                    quantity: updatedToy.quantity,
+                    description: updatedToy.description,
+                }
+            };
+            const result = await toyscollection.updateOne(filter, toy, options);
             res.send(result);
         })
 
