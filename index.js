@@ -43,7 +43,7 @@ async function run() {
                 }
             }
 
-            const result = await toyscollection.find(query).toArray();
+            const result = await toyscollection.find(query).limit(20).toArray();
             res.send(result)
         })
 
