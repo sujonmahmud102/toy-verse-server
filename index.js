@@ -59,7 +59,10 @@ async function run() {
                 }
             }
 
-            const result = await toyscollection.find(query, options).limit(20).toArray();
+            const result = await toyscollection.find(query, options).collation({
+                locale: "en_US",
+                numericOrdering: true
+            }).limit(20).toArray();
             res.send(result)
         })
 
