@@ -35,15 +35,31 @@ async function run() {
 
         // getting toys from mongodb
         app.get('/toys', async (req, res) => {
-            // console.log(req.query)
+            // console.log(req.query.sort)
             let query = {};
             if (req.query.sellerEmail) {
                 query = {
                     sellerEmail: req.query.sellerEmail
                 }
             }
+            // data sorting
+            let options = {}
+            if (req.query.sort === 'desc') {
+                options = {
+                    sort: {
+                        price: -1
+                    }
+                }
+            }
+            if (req.query.sort === 'asc') {
+                options = {
+                    sort: {
+                        price: 1
+                    }
+                }
+            }
 
-            const result = await toyscollection.find(query).limit(20).toArray();
+            const result = await toyscollection.find(query, options).limit(20).toArray();
             res.send(result)
         })
 
