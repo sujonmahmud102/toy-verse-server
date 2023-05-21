@@ -100,7 +100,7 @@ async function run() {
             const filter = {
                 _id: new ObjectId(id)
             };
-            const updatedToy = req.body;
+            const updatedToy = req.body;  console.log(updatedToy)
             const options = {
                 upsert: true
             };
@@ -108,6 +108,7 @@ async function run() {
                 $set: {
                     photo: updatedToy.photo,
                     toyName: updatedToy.toyName,
+                    price: updatedToy.price,
                     subCategory: updatedToy.subCategory,
                     rating: updatedToy.rating,
                     quantity: updatedToy.quantity,
